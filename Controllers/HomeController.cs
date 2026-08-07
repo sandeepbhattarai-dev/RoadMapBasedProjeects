@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace RoadMapBasedProjeects.Controllers
+namespace RoadMapBasedProjects.Controllers
 {
     public class HomeController : Controller
     {
