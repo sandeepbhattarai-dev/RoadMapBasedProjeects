@@ -5,7 +5,7 @@
   - Understand the .NET ecosystem and .NET Core vs .NET Framework.
   - Create a new ASP.NET Core MVC project.
   - Learn the structure of an ASP.NET Core project: `Program.cs`, `Startup.cs`, `appsettings.json`.
-- **Project Output:**  
+  - **Project Output:**  
     - Create a "Hello World" ASP.NET Core MVC web application and deploy it locally.
 
 
@@ -14,5 +14,26 @@
   - Deep dive into `Program.cs` and `Startup.cs`.
   - Explore `appsettings.json` and environment-specific settings.
   - Configure basic settings in `appsettings.json`.
+  - **Project Output:**
+    - Modify `appsettings.json` to include a custom configuration section and read these values in a controller action.
+
+## Week 3: Controllers, Actions, and Routing
+- [ ] Tasks:
+  - Understand the role of controllers and actions.
+  - Learn about routing and configure custom routes.
+  - Pass data from controllers to views. 
+  - **Project Output:**
+    - Create a controller that handles basic CRUD operations and configure routing for these actions.
+
+## Week 4: Views and Razor Syntax and Layouts
+- [ ] Tasks:
+  - Understand Razor syntax and create views.
+  - Use layouts and partial views for reusable components.
+  - Bind data to views using view models.
+   - Bootstrap Framework
 - **Project Output:**
-  - Modify `appsettings.json` to include a custom configuration section and read these values in a controller action.
+  - Develop a simple web application that (displays a list of items) -output and detailed views using Razor (Presentation).
+   - Develop dynamic cards using bootstrap cards, grids etc.  
+Login Page, Homepage, Banner, Hero Section
+
+
