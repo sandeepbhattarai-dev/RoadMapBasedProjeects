@@ -59,3 +59,7 @@ Step 4: I created a new view for the `CustomConfigurationController` to display 
 Step 5: I ran the application and navigated to the `CustomConfigController` route. The values from the `appsettings.json` were successfully read and displayed in the view.
 
 Step 6: I committed the changes to the new branch and pushed it to the remote repository.
+
+
+## Explanation:
+when the application starts, the `IConfiguration` service is automatically populated with the settings from `appsettings.json`. By injecting `IConfiguration` into the controller, we can access these settings using the appropriate keys. The values are then passed to the view for display.
