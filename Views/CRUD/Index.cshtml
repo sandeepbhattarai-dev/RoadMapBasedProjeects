@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Week stuff</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Welcome to Week3</h1>
+    </div>
+    <div class="main-content">
+      <h2>Data list</h2>
+      <a href="/CRUD/Create">Create a new Entry</a>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <td>Country</td>
+              <td>Capital</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach (var single in Model)
+            {
+              <tr>
+                <td>@single.Id</td>
+                <td>@single.Name</td>
+                <td> <a href="/CRUD/Edit/@single.Id">Edit</a> <a href="/CRU/delete/@single.Id">Delete</a></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <p>made with love</p>
+    </div>
+  </div>
+
+</body>
+</html>
