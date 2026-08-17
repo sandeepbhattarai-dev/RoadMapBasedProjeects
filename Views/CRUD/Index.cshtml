@@ -28,9 +28,9 @@
             @foreach (var single in Model)
             {
               <tr>
-                <td>@single.Id</td>
                 <td>@single.Name</td>
-                <td> <a href="/CRUD/Edit/@single.Id">Edit</a> <a href="/CRU/delete/@single.Id">Delete</a></td>
+                <td>@single.Job</td>
+                <td> <a href="/CRUD/Edit/@single.Id">Edit</a> <a href="/CRUd/Delete/@single.Id">Delete</a></td>
               </tr>
             }
           </tbody>

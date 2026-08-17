@@ -1,9 +1,33 @@
-﻿<div>
-    <form method="post" action="/CRUD/Create">
-        country: <input type="text" placeholder="enter a country name" name="Country"/>
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link src="/css/style.css" />
+  <title>Week stuff</title>
+</head>
+<body>
+  <div>
+    <header>
+      <p>navigation</p>
+    </header>
 
-        Capital: <input type="text" placeholder="Enter the capital" name="Capital"/>
+    <div class="main-content">
+      <div class="create">
+        <form method="post" action="/CRUD/Create">
+          <input type="text" placeholder="Enter Name " name="Name" />
 
-        <input type= "submit" />
-    </form>
-</div>
+          <input type="text" placeholder="Enter Your Job" name="Job" />
+
+          <input type="submit" />
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made with love.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -13,15 +13,19 @@
     </header>
 
     <div class="main-content">
-      <h1>Name with Job</h1>
+      <div class="main-content">
+        <h1>Name with Job</h1>
 
-      <form method="post" action="/CRUD/Edit">
-        <input type="text" value="@Model.Name" name="Name" />
+        <form action="/CRUD/Delete" method="post">
+          <input type="text" value="Model.Name" name="Name" disabled/>
 
-        <input type="text" value="@Model.Job" name="Job" />
+          <input type="text" value="Model.Job" name="Job" disabled/>
 
-        <input type="submit" />
-      </form>
+          <input />
+          <a></a>
+        </form>
+      </div>
+
     </div>
 
     <footer>
