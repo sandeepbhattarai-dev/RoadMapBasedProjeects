@@ -8,4 +8,7 @@
 - **Project Output:**
   - Develop a simple web application that (displays a list of items) -output and detailed views using Razor (Presentation).
    - Develop dynamic cards using bootstrap cards, grids etc.  
-Login Page, Homepage, Banner, Hero Section
+  - Login Page, Homepage, Banner, Hero Section  
+
+  flow => Homepage/index > 
+  2.a)Login page > validation > Sign Up > success ? loginPage : retry; 2.b) carts details > DynamicCards
