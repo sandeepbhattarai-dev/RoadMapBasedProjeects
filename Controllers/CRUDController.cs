@@ -1,27 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using RoadMapBasedProjects.Data;
 using RoadMapBasedProjects.Models;
 
 namespace RoadMapBasedProjects.Controllers
 {
   public class CRUDController : Controller
   {
+    private readonly IUserRepo _users;
 
-    private List<User> _user = new List<User>
-      {
-      new User { Id = 1, Name="Ron", Job="Doctor"},
-      new User { Id = 2, Name="Roy", Job="Plumber"}
-    };
+    public CRUDController(IUserRepo users)
+    {
+      _users = users;
+
+    }
 
     public IActionResult Index()
     {
-      return View(_user);
-    }
+      var allUsers = _users.Read();
 
-    public IActionResult IndexNew()
-    {
-      return View(_user);
-
+      return View(allUsers);
     }
 
 
@@ -30,38 +27,39 @@ namespace RoadMapBasedProjects.Controllers
       return View();
     }
     [HttpPost]
-    public void Create(User details)
+    public IActionResult Create(User details)
     {
-      details.Id = _user.Count() + 1;
-      _user.Add(details);
+
+      _users.Create(details);
+      
+      return RedirectToAction("Index");
     }
 
 
     public IActionResult Edit(int Id)
     {
-      User user = _user[Id];
+      User user = _users.GetById(Id);
       return View(user);
     }
 
     [HttpPost]
     public IActionResult Edit(User details)
     {
-      _user.Add(details);
-      return RedirectToAction(nameof(Index));
+      bool result = _users.Edit(details);
+      return result ? RedirectToAction(nameof(Index)) : NotFound();
     }
 
     public IActionResult Delete(int Id)
     {
-      User user = _user[Id];
+      User user = _users.GetById(Id);
       return View(user);
     }
 
     [HttpPost]
-    [Route("Delete")]
-    public IActionResult DeleteConfirm(User details)
+    public IActionResult Delete(User details)
     {
-      _user.Remove(details);
-      return View("");
+      bool result = _users.Delete(details);
+      return result ? RedirectToAction("Index") : NotFound();
     }
 
   }

@@ -33,12 +33,14 @@
 
   <!-- MAIN CONTENT (placeholder, pushes footer down) -->
   <main class="flex-grow-1 container py-5">
-    <h1>Name with Job</h1>
+    <h1>Name and Descripton</h1>
 
     <form method="post" action="/CRUD/Edit">
+      <input value="@Model.Id" name="Id" hidden="hidden"/>
+
       <input type="text" value="@Model.Name" name="Name" />
 
-      <input type="text" value="@Model.Job" name="Job" />
+      <input type="text" value="@Model.Descripton" name="Descripton" />
 
       <input type="submit" />
     </form>

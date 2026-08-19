@@ -37,12 +37,14 @@
       <h1>Name with Job</h1>
 
       <form action="/CRUD/Delete" method="post">
-        <input type="text" value="Model.Name" name="Name" disabled />
 
-        <input type="text" value="Model.Job" name="Job" disabled />
+        <input type="number" value="@Model.Id" name="Id" hidden="hidden" />
 
-        <input />
-        <a></a>
+        <input type="text" value="@Model.Name" name="Name"  disabled/>
+
+        <input type="text" value="@Model.Descripton" name="Descripton" disabled />
+
+        <input type="submit"/>
       </form>
     </div>
   </main>
