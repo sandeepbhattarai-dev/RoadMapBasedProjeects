@@ -1,4 +1,11 @@
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(
+  new WebApplicationOptions
+  {
+    Args = args,
+    WebRootPath = "Xwwwroot"
+  }
+ );
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
