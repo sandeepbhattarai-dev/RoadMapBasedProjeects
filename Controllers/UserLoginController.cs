@@ -1,15 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RoadMapBasedProjects.DTOs;
+using RoadMapBasedProjects.Enums;
+using RoadMapBasedProjects.Services;
+using RoadMapBasedProjects.ViewModel;
 
 namespace RoadMapBasedProjects.Controllers
 {
   public class UserLoginController : Controller
   {
+    private readonly GetHobbies _getHobbies;
 
-    public UserLoginController()
+    public UserLoginController(GetHobbies hobbies)
     {
-      
+      _getHobbies = hobbies;
     }
+    //public UserLoginController()
+    //{
+
+    //}
     public IActionResult Login()
     {
       return View();
@@ -18,8 +26,19 @@ namespace RoadMapBasedProjects.Controllers
     public IActionResult SignUp()
     {
       //fetch gender and hobbies and pass it to the
+      IEnumerable<string> hobbyNames = _getHobbies.GetAllHobbies();
 
-      return View();
+      Gender[] genders = Enum.GetValues<Gender>();
+
+      RegistrationDTO registrationDTO = new RegistrationDTO();
+      var viewModel = new HobbyAndEnumviewModel
+      {
+        HobbyNames = hobbyNames,
+        Genders = genders,
+        Registration = registrationDTO
+      };
+
+      return View(viewModel);
     }
     [HttpPost]
     public IActionResult SignUp(RegistrationDTO userRegistration)
@@ -33,7 +52,7 @@ namespace RoadMapBasedProjects.Controllers
       {
 
       }
-      
+
       return RedirectToAction("Login");
     }
   }

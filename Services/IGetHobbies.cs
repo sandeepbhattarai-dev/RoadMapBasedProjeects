@@ -3,6 +3,6 @@
   public interface IGetHobbies
   {
     
-    public List<string> GetAllHobbies();
+    public IEnumerable<string> GetAllHobbies();
   }
 }

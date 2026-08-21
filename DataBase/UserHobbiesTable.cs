@@ -2,7 +2,7 @@
 
 namespace RoadMapBasedProjects.DataBase
 {
-  public class _UserHobbies
+  public class UserHobbiesTable
   {
     List<UserHobbies> userHobbies = new List<UserHobbies>
       {

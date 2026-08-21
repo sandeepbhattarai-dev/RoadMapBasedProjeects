@@ -1,17 +1,14 @@
-﻿using RoadMapBasedProjects.Models;
-using RoadMapBasedProjects.Data;
+﻿using RoadMapBasedProjects.DataBase;
 
 namespace RoadMapBasedProjects.Services
 {
   public class GetHobbies : IGetHobbies
   {
-    private readonly Hobbies _hobbies;
-
-
-
-    public List<string> GetAllHobbies()
+    public IEnumerable<string> GetAllHobbies()
     {
-      
+      //var item = HobbiesTable.hobbies;
+      //IEnumerable<string> names = HobbiesTable.hobbies.Select(item => item.Name != null ? item.Name : "");
+      return HobbiesTable.hobbies.Select(item => item.Name != null ? item.Name : "");
     }
   }
 }

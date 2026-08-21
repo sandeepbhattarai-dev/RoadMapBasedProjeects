@@ -3,7 +3,7 @@
 
 namespace RoadMapBasedProjects.Data
 {
-  public class _ProductData
+  public class ProductDataTable
   {
     List<Product> products = new List<Product>
     {
