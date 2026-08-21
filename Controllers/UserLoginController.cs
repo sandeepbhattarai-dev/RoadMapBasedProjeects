@@ -6,7 +6,10 @@ namespace RoadMapBasedProjects.Controllers
   public class UserLoginController : Controller
   {
 
-
+    public UserLoginController()
+    {
+      
+    }
     public IActionResult Login()
     {
       return View();

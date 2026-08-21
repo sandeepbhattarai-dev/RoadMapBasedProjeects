@@ -3,7 +3,7 @@
 
 namespace RoadMapBasedProjects.Data
 {
-  public class ProductData
+  public class _ProductData
   {
     List<Product> products = new List<Product>
     {
@@ -88,51 +88,5 @@ namespace RoadMapBasedProjects.Data
           Stock = 15
       }
 };
-  }
-  
-  public class UserHobbies
-    {
-    List<UserHobby> userHobbies = new List<UserHobby>
-      {
-        new UserHobby { UserId = 1, HobbyId = 1 },
-        new UserHobby { UserId = 1, HobbyId = 2 },
-        new UserHobby { UserId = 1, HobbyId = 5 },
-
-        new UserHobby { UserId = 2, HobbyId = 1 },
-        new UserHobby { UserId = 2, HobbyId = 3 },
-        new UserHobby { UserId = 2, HobbyId = 5 },
-
-        new UserHobby { UserId = 3, HobbyId = 2 },
-        new UserHobby { UserId = 3, HobbyId = 3 },
-        new UserHobby { UserId = 3, HobbyId = 4 },
-
-        new UserHobby { UserId = 4, HobbyId = 1 },
-        new UserHobby { UserId = 4, HobbyId = 3 },
-        new UserHobby { UserId = 4, HobbyId = 4 },
-
-        new UserHobby { UserId = 5, HobbyId = 2 },
-        new UserHobby { UserId = 5, HobbyId = 4 },
-        new UserHobby { UserId = 5, HobbyId = 5 },
-
-        new UserHobby { UserId = 6, HobbyId = 1 },
-        new UserHobby { UserId = 6, HobbyId = 3 },
-        new UserHobby { UserId = 6, HobbyId = 5 },
-
-        new UserHobby { UserId = 7, HobbyId = 2 },
-        new UserHobby { UserId = 7, HobbyId = 3 },
-        new UserHobby { UserId = 7, HobbyId = 4 },
-
-        new UserHobby { UserId = 8, HobbyId = 1 },
-        new UserHobby { UserId = 8, HobbyId = 2 },
-        new UserHobby { UserId = 8, HobbyId = 5 },
-
-        new UserHobby { UserId = 9, HobbyId = 2 },
-        new UserHobby { UserId = 9, HobbyId = 3 },
-        new UserHobby { UserId = 9, HobbyId = 4 },
-
-        new UserHobby { UserId = 10, HobbyId = 1 },
-        new UserHobby { UserId = 10, HobbyId = 3 },
-        new UserHobby { UserId = 10, HobbyId = 4 }
-      };
   }
 }

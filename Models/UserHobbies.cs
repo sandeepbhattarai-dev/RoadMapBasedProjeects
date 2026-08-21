@@ -1,6 +1,6 @@
 ﻿namespace RoadMapBasedProjects.Models
 {
-  public class UserHobby
+  public class UserHobbies
   {
     public int UserId { get; set; }
     public int HobbyId { get; set; }
