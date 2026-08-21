@@ -5,15 +5,11 @@
   <p class="ps-4 display-6">Home / landing Page > Login or Signup > View Card details</p>
 </div>
 
-<div class="container d-flex bg-dark-subtle justify-content-evenly">
-    <div class="col-3 bg-dark p-4 d-flex flex-column justify-content-center">
-       <p class="text-center">Already a User?</p>
-      <a class="btn btn-info w-25 text-danger fw-bold w-75">Login</a>
-   </div>
-
-
-    <div class="col-3 bg-success">
-      <p>New Here?</p>
-      <a class="btn-success">Sign Up</a>
-    </div>
-</div>
+@if(true)
+{
+    <partial name="_GuestUser" />
+}
+else
+{
+  @* <partial name="_LoggedIn" /> *@
+}

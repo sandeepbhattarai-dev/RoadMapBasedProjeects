@@ -1,0 +1,131 @@
+﻿/* ===== Base ===== */
+body {
+  background-color: #1a1a2e;
+  min-height: 100vh;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* ===== Logo top-left ===== */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #f5f6f8;
+}
+
+  .brand-logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+/* ===== Centered card ===== */
+.auth-card {
+  background: #222236;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  padding: 3rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+  .auth-card .eyebrow {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .auth-card h1 {
+    font-weight: 800;
+    font-size: 1.85rem;
+    color: #f5f6f8;
+    margin-bottom: 2rem;
+  }
+
+/* ===== Field labels ===== */
+.field-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* ===== Pill-style inputs / selects ===== */
+.form-control-pill,
+.form-select-pill {
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid #33334d;
+  background-color: #2a2a40;
+  color: #f5f6f8;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+  .form-control-pill::placeholder {
+    color: #7b7f92;
+  }
+
+  .form-control-pill:focus,
+  .form-select-pill:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.25);
+    outline: none;
+    background-color: #2a2a40;
+    color: #f5f6f8;
+  }
+
+  /* Invalid state once the user has typed something */
+  .form-control-pill:invalid:not(:placeholder-shown) {
+    border-color: #f87171;
+  }
+
+  /* Autofill fix so Chrome doesn't force a white background */
+  .form-control-pill:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #2a2a40 inset;
+    -webkit-text-fill-color: #f5f6f8;
+  }
+
+/* ===== Checkbox / radio ===== */
+.form-check-input {
+  border-radius: 4px;
+  border: 1.5px solid #4b4b63;
+  background-color: #2a2a40;
+}
+
+  .form-check-input[type="radio"] {
+    border-radius: 50%;
+  }
+
+  .form-check-input:checked {
+    background-color: #4a6cf7;
+    border-color: #4a6cf7;
+  }
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+/* ===== Section groupings (Gender / Hobbies) ===== */
+.section-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 0.6rem;
+}
+
+.hobby-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.gender-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ===== Forgot password link*?*/

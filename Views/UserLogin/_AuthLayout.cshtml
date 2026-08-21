@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome Back</title>
+
+  <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+  <link href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="~/css/_AuthLogin.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container-fluid px-4 py-4">
+
+    <!-- Logo -->
+    <div class="brand-logo mb-4">
+      
+      <a asp-controller="Home" asp-action="Index"><i class="bi bi-calendar4-week"></i> <span>Week - 4</span></a>
+    </div>
+
+    <!-- Centered card -->
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 75vh;">
+      @RenderBody()
+  </div>
+ </div>
+
+
+</body>
+</html>

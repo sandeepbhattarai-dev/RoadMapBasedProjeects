@@ -1,10 +1,21 @@
 {
   "version": "3.0",
   "defaultProvider": "cdnjs",
+  "defaultDestination": "Xwwwroot/",
   "libraries": [
     {
       "library": "bootstrap@5.3.8",
       "destination": "Xwwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "jquery@4.0.0",
+      "destination": "Xwwwroot/jquery/"
     }
-  ]
+  ,
+{
+  "provider": "cdnjs",
+  "library": "bootstrap-icons@1.13.1",
+  "destination": "Xwwwroot/lib/bootstrap-icons/"
+}
+]
 }

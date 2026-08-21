@@ -1,0 +1,184 @@
+﻿@model RoadMapBasedProjects.DTOs.RegistrationDTO;
+@using RoadMapBasedProjects.Enums;
+
+
+<div class="container-fluid px-4 py-4">
+
+  <!-- Centered card -->
+  <div class="d-flex justify-content-center align-items-center py-4">
+    <div class="auth-card">
+
+      <p class="eyebrow">Let's get you started</p>
+      <h1>Create account</h1>
+
+      <form novalidate method="post" asp-action="SignUp">
+
+        <!-- User ID -->
+        <div class="mb-3">
+          <label asp-for="Id" class="field-label">User ID</label>
+          <input type="text"
+                 asp-for="Id"
+                 id="userId"
+                 name="userId"
+                 class="form-control-pill"
+                 placeholder="Choose a unique user ID"
+                 pattern="^[a-zA-Z0-9_]{4,20}$"
+                 minlength="4"
+                 maxlength="20"
+                 required
+                 autocomplete="username" />
+          <span asp-validation-for="Id"></span>
+        </div>
+
+        <!-- Full Name -->
+        <div class="mb-3">
+          <label for="fullName" class="field-label" asp-for="Name"></label>
+          <input type="text"
+                 id="fullName"
+                 name="fullName"
+                 class="form-control-pill"
+                 placeholder="Enter your full name"
+                 pattern="^[A-Za-z\s]{2,50}$"
+                 required
+                 autocomplete="name"
+                 asp-for="Name"/>
+          <span asp-validation-for="Name"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="field-label" asp-for="Email"></label>
+          <input type="email"
+                 id="email"
+                 name="email"
+                 class="form-control-pill"
+                 placeholder="Email adress"
+                 required
+                 autocomplete="email" 
+                 asp-for="Name"/>
+          <span asp-validation-for="Name"></span>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="password" class="field-label">Password</label>
+          <input type="password"
+                 id="password"
+                 name="password"
+                 class="form-control-pill"
+                 placeholder="Password"
+                 pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$"
+                 minlength="8"
+                 required
+                 autocomplete="new-password" />
+          <div class="text-light">Min 8 characters, include at least 1 letter and 1 number</div>
+          <span asp-validation-for="Password"></span>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-3">
+          <label for="confirmPassword" class="field-label" asp-for="ConfirmPassword"></label>
+          <input type="password"
+                 id="confirmPassword"
+                 name="confirmPassword"
+                 class="form-control-pill"
+                 placeholder="Re-enter password"
+                 required
+                 autocomplete="new-password" 
+                 asp-for="ConfirmPassword"/>
+          <span asp-validation-for="ConfirmPassword"></span>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-3">
+          <label for="phone" class="field-label" asp-for="PhoneNumber"></label>
+          <input type="tel"
+                 id="phone"
+                 name="phone"
+                 class="form-control-pill"
+                 placeholder="e.g. 9876543210"
+                 pattern="^[6-9]\d{9}$"
+                 required
+                 autocomplete="tel" 
+                 asp-for="PhoneNumber" />
+          <div class="text-light">10-digit mobile number</div>
+          <span asp-validation-for="PhoneNumber"></span>
+        </div>
+
+        <!-- Gender (radio) -->
+        <div class="mb-3">
+          <span class="section-title">Gender</span>
+
+          <div class="gender-group">
+            @foreach (var gender in Enum.GetValues<Gender>())
+            {
+              var genderId = $"gender{gender}";
+
+              <div class="form-check">
+                <input class="form-check-input"
+                       type="radio"
+                       asp-for="Gender"
+                       value="@gender"
+                       id="@genderId" />
+
+                <label class="form-check-label"
+                       for="@genderId">
+                  @gender
+                </label>
+              </div>
+            }
+          </div>
+
+          <span asp-validation-for="Gender"></span>
+        </div>
+
+        <!-- Hobbies (checkbox) -->
+        <div class="mb-4">
+          <span class="section-title">Hobbies</span>
+          <div class="hobby-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyReading" value="Reading" />
+              <label class="form-check-label" for="hobbyReading">Reading</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbySports" value="Sports" />
+              <label class="form-check-label" for="hobbySports">Sports</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyMusic" value="Music" />
+              <label class="form-check-label" for="hobbyMusic">Music</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyTravel" value="Travel" />
+              <label class="form-check-label" for="hobbyTravel">Travel</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyGaming" value="Gaming" />
+              <label class="form-check-label" for="hobbyGaming">Gaming</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terms -->
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" id="agreeTerms" name="agreeTerms" required />
+          <label class="form-check-label" for="agreeTerms">
+            I agree to the <a href="#">Terms & Conditions</a>
+          </label>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary w-100 mb-3">
+          Sign up
+        </button>
+
+        <p class="text-center bottom-text mb-0 text-light">
+          Already have an account? <a asp-action="Login">Sign in</a>
+        </p>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
