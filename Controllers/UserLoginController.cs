@@ -6,7 +6,7 @@ namespace RoadMapBasedProjects.Controllers
   public class UserLoginController : Controller
   {
 
-    private readonly RegistrationDTO registration = new RegistrationDTO();
+
     public IActionResult Login()
     {
       return View();
@@ -14,6 +14,7 @@ namespace RoadMapBasedProjects.Controllers
 
     public IActionResult SignUp()
     {
+      //fetch gender and hobbies and pass it to the
 
       return View();
     }
@@ -23,6 +24,11 @@ namespace RoadMapBasedProjects.Controllers
       if (!ModelState.IsValid)
       {
         return View();
+      }
+
+      if (false) // calls the registration service and pass the userRegistration data
+      {
+
       }
       
       return RedirectToAction("Login");
