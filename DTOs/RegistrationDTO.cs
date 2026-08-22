@@ -40,7 +40,7 @@ namespace RoadMapBasedProjects.DTOs
     public string? ConfirmPassword { get; set; }
 
     [Required(ErrorMessage = "Please select a gender.")]
-    public Gender? Gender { get; set; }
+    public Genders? Gender { get; set; }
 
     [Required(ErrorMessage = "Please accept the terms and conditions.")]
     public bool IsTermsAgreed { get; set; }

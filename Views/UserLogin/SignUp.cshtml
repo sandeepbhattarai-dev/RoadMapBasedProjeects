@@ -1,11 +1,13 @@
-﻿@model RoadMapBasedProjects.ViewModel.HobbyAndEnumviewModel;
+﻿@model HobbyAndEnumviewModel;
 
-@Model.Genders
-@Model.HobbyNames
-@Model.Registration
+@* <p class="text-light">
+  @foreach(var item in Model.Genders)
+  {
+    <h1>@item</h1>
+  }
+</p> *@
 
-@* <div class="container-fluid px-4 py-4"> 
-
+<div class="container-fluid px-4 py-4"> 
   <!-- Centered card -->
   <div class="d-flex justify-content-center align-items-center py-4">
     <div class="auth-card">
@@ -17,9 +19,9 @@
 
         <!-- User ID -->
         <div class="mb-3">
-          <label asp-for="Id" class="field-label">User ID</label>
+          <label asp-for="Registration.UserName" class="field-label">User ID</label>
           <input type="text"
-                 asp-for="Id"
+                 asp-for="Registration.UserName"
                  id="userId"
                  name="userId"
                  class="form-control-pill"
@@ -29,12 +31,12 @@
                  maxlength="20"
                  required
                  autocomplete="username" />
-          <span asp-validation-for="Id"></span>
+          <span asp-validation-for="Registration.UserName"></span>
         </div>
 
         <!-- Full Name -->
         <div class="mb-3">
-          <label for="fullName" class="field-label" asp-for="Name"></label>
+          <label for="fullName" class="field-label" asp-for="Registration.Name"></label>
           <input type="text"
                  id="fullName"
                  name="fullName"
@@ -43,13 +45,13 @@
                  pattern="^[A-Za-z\s]{2,50}$"
                  required
                  autocomplete="name"
-                 asp-for="Name"/>
-          <span asp-validation-for="Name"></span>
+                 asp-for="Registration.Name" />
+          <span asp-validation-for="Registration.Name"></span>
         </div>
 
         <!-- Email -->
         <div class="mb-3">
-          <label for="email" class="field-label" asp-for="Email"></label>
+          <label for="email" class="field-label" asp-for="Registration.Email"></label>
           <input type="email"
                  id="email"
                  name="email"
@@ -57,13 +59,13 @@
                  placeholder="Email adress"
                  required
                  autocomplete="email" 
-                 asp-for="Name"/>
-          <span asp-validation-for="Name"></span>
+                 asp-for="Registration.Email" />
+          <span asp-validation-for="Registration.Email"></span>
         </div>
 
         <!-- Password -->
         <div class="mb-3">
-          <label for="password" class="field-label">Password</label>
+          <label for="password" class="field-label" asp-for="Registration.Password"></label>
           <input type="password"
                  id="password"
                  name="password"
@@ -72,14 +74,15 @@
                  pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$"
                  minlength="8"
                  required
-                 autocomplete="new-password" />
+                 autocomplete="new-password" 
+                 asp-for="Registration.Password" />
           <div class="text-light">Min 8 characters, include at least 1 letter and 1 number</div>
-          <span asp-validation-for="Password"></span>
+          <span asp-validation-for="Registration.Password"></span>
         </div>
 
         <!-- Confirm Password -->
         <div class="mb-3">
-          <label for="confirmPassword" class="field-label" asp-for="ConfirmPassword"></label>
+          <label for="confirmPassword" class="field-label" asp-for="Registration.ConfirmPassword"></label>
           <input type="password"
                  id="confirmPassword"
                  name="confirmPassword"
@@ -87,13 +90,13 @@
                  placeholder="Re-enter password"
                  required
                  autocomplete="new-password" 
-                 asp-for="ConfirmPassword"/>
-          <span asp-validation-for="ConfirmPassword"></span>
+                 asp-for="Registration.ConfirmPassword" />
+          <span asp-validation-for="Registration.ConfirmPassword"></span>
         </div>
 
         <!-- Phone Number -->
         <div class="mb-3">
-          <label for="phone" class="field-label" asp-for="PhoneNumber"></label>
+          <label for="phone" class="field-label" asp-for="Registration.PhoneNumber"></label>
           <input type="tel"
                  id="phone"
                  name="phone"
@@ -102,36 +105,36 @@
                  pattern="^[6-9]\d{9}$"
                  required
                  autocomplete="tel" 
-                 asp-for="PhoneNumber" />
+                 asp-for="Registration.PhoneNumber" />
           <div class="text-light">10-digit mobile number</div>
-          <span asp-validation-for="PhoneNumber"></span>
+          <span asp-validation-for="Registration.PhoneNumber"></span>
         </div>
 
         <!-- Gender (radio) -->
         <div class="mb-3">
           <span class="section-title">Gender</span>
 
-          <div class="gender-group">
-            @foreach (var gender in Enum.GetValues<Gender>())
-            {
-              var genderId = $"gender{gender}";
-
-              <div class="form-check">
-                <input class="form-check-input"
-                       type="radio"
-                       asp-for="Gender"
-                       value="@gender"
-                       id="@genderId" />
-
-                <label class="form-check-label"
-                       for="@genderId">
-                  @gender
-                </label>
-              </div>
+          @if (Model.Genders != null)
+          {
+            <div class="gender-group">
+              @foreach (var gender in Model.Genders)
+              {
+                var genderId = $"gender{gender}";
+                <div class="form-check">
+                  <input class="form-check-input"
+                         type="radio"
+                         asp-for="Genders"
+                         value="@gender"
+                         id="@genderId" />
+                  <label class="form-check-label" for="@genderId">@gender</label>
+                </div>
+              }
+            </div>
+          }
             }
           </div>
 
-          <span asp-validation-for="Gender"></span>
+          <span asp-validation-for="Genders"></span>
         </div>
 
         <!-- Hobbies (checkbox) -->
@@ -182,5 +185,4 @@
 
     </div>
   </div>
-
-@* </div> *@
+</div>

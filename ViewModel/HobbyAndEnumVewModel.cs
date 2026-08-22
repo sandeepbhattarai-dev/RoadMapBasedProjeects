@@ -5,9 +5,9 @@ namespace RoadMapBasedProjects.ViewModel
 {
   public class HobbyAndEnumviewModel
   {
-    public IEnumerable<string> HobbyNames { get; set; }
-    public Gender[] Genders { get; set; }
+    public IEnumerable<string>? HobbyNames { get; set; }
+    public Genders[]? Genders { get; set; }
 
-    public RegistrationDTO Registration { get; set; }
+    public RegistrationDTO? Registration { get; set; }
   }
 }

@@ -15,5 +15,7 @@ namespace RoadMapBasedProjects.Services
   public interface IRegistrationService
   {
     public RegistrationResult Register(RegistrationDTO registrationDTO);
+    public bool UsernameExist(string Username);
+    public bool PhoneNumberExist(string PhoneNumber);
   }
 }

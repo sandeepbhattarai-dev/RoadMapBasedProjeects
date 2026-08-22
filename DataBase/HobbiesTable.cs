@@ -2,9 +2,9 @@
 
 namespace RoadMapBasedProjects.DataBase
 {
-  public static class HobbiesTable
+  public class HobbiesTable
   {
-    public static List<Hobbies> hobbies = new List<Hobbies>
+    public List<Hobbies> hobbies = new List<Hobbies>
     {
       new Hobbies {Id = 1, Name = "Reading" },
 

@@ -1,7 +1,7 @@
 ﻿using RoadMapBasedProjects.Models;
 
 
-namespace RoadMapBasedProjects.Data
+namespace RoadMapBasedProjects.DataBase
 {
   public class ProductDataTable
   {

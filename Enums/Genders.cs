@@ -1,6 +1,6 @@
 ﻿namespace RoadMapBasedProjects.Enums
 {
-  public enum Gender
+  public enum Genders
   {
     Male,
     Female,

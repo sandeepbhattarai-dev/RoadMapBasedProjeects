@@ -3,16 +3,21 @@ using RoadMapBasedProjects.DTOs;
 using RoadMapBasedProjects.Enums;
 using RoadMapBasedProjects.Services;
 using RoadMapBasedProjects.ViewModel;
+using System.Security.Cryptography.X509Certificates;
 
 namespace RoadMapBasedProjects.Controllers
 {
   public class UserLoginController : Controller
   {
-    private readonly GetHobbies _getHobbies;
 
-    public UserLoginController(GetHobbies hobbies)
+    private readonly IGetHobbies _gethobbiessv;
+    private readonly IRegistrationService _registersv;
+
+    public UserLoginController(IGetHobbies gethobbies, IRegistrationService register)
     {
-      _getHobbies = hobbies;
+      _gethobbiessv = gethobbies;
+      _registersv = register;
+
     }
     //public UserLoginController()
     //{
@@ -26,12 +31,13 @@ namespace RoadMapBasedProjects.Controllers
     public IActionResult SignUp()
     {
       //fetch gender and hobbies and pass it to the
-      IEnumerable<string> hobbyNames = _getHobbies.GetAllHobbies();
+      IEnumerable<string> hobbyNames = _gethobbiessv.GetAllHobbies();
 
-      Gender[] genders = Enum.GetValues<Gender>();
+      Gender[] genders = Enum.GetValues<Genders>();
+      PublicKey G
 
       RegistrationDTO registrationDTO = new RegistrationDTO();
-      var viewModel = new HobbyAndEnumviewModel
+      HobbyAndEnumviewModel viewModel = new HobbyAndEnumviewModel
       {
         HobbyNames = hobbyNames,
         Genders = genders,

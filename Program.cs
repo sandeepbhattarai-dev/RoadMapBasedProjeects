@@ -1,3 +1,4 @@
+using RoadMapBasedProjects.DataBase;
 using RoadMapBasedProjects.Services;
 
 var builder = WebApplication.CreateBuilder(
@@ -12,7 +13,14 @@ var builder = WebApplication.CreateBuilder(
 builder.Services.AddControllersWithViews();
 
 // add the  singleton services
+builder.Services.AddSingleton<UsersTable>();
+builder.Services.AddSingleton<UserHobbiesTable>();
+builder.Services.AddSingleton<HobbiesTable>();
+builder.Services.AddSingleton<ProductDataTable>();
+builder.Services.AddSingleton<IAuthService, AuthService>();
+
 builder.Services.AddScoped<IGetHobbies, GetHobbies>();
+builder.Services.AddScoped<IRegistrationService, RegistrationService>();
 
 var app = builder.Build();
 
