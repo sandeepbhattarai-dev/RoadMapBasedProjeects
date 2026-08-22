@@ -17,13 +17,13 @@
 
       <form novalidate method="post" asp-action="SignUp">
 
-        <!-- User ID -->
+        <!-- Username-->
         <div class="mb-3">
           <label asp-for="Registration.UserName" class="field-label">User ID</label>
           <input type="text"
                  asp-for="Registration.UserName"
-                 id="userId"
-                 name="userId"
+                 
+    
                  class="form-control-pill"
                  placeholder="Choose a unique user ID"
                  pattern="^[a-zA-Z0-9_]{4,20}$"
@@ -38,8 +38,7 @@
         <div class="mb-3">
           <label for="fullName" class="field-label" asp-for="Registration.Name"></label>
           <input type="text"
-                 id="fullName"
-                 name="fullName"
+                 
                  class="form-control-pill"
                  placeholder="Enter your full name"
                  pattern="^[A-Za-z\s]{2,50}$"
@@ -53,8 +52,7 @@
         <div class="mb-3">
           <label for="email" class="field-label" asp-for="Registration.Email"></label>
           <input type="email"
-                 id="email"
-                 name="email"
+                 
                  class="form-control-pill"
                  placeholder="Email adress"
                  required
@@ -67,8 +65,7 @@
         <div class="mb-3">
           <label for="password" class="field-label" asp-for="Registration.Password"></label>
           <input type="password"
-                 id="password"
-                 name="password"
+                 
                  class="form-control-pill"
                  placeholder="Password"
                  pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$"
@@ -84,8 +81,7 @@
         <div class="mb-3">
           <label for="confirmPassword" class="field-label" asp-for="Registration.ConfirmPassword"></label>
           <input type="password"
-                 id="confirmPassword"
-                 name="confirmPassword"
+                 
                  class="form-control-pill"
                  placeholder="Re-enter password"
                  required
@@ -98,8 +94,7 @@
         <div class="mb-3">
           <label for="phone" class="field-label" asp-for="Registration.PhoneNumber"></label>
           <input type="tel"
-                 id="phone"
-                 name="phone"
+                 
                  class="form-control-pill"
                  placeholder="e.g. 9876543210"
                  pattern="^[6-9]\d{9}$"
@@ -109,9 +104,7 @@
           <div class="text-light">10-digit mobile number</div>
           <span asp-validation-for="Registration.PhoneNumber"></span>
         </div>
-
-
-
+        
         <!-- Gender (radio) -->
         <div class="mb-3">
           <span class="section-title">Gender</span>
@@ -136,7 +129,6 @@
           <span asp-validation-for="Registration.Gender" class="text-danger"></span>
         </div>
        
-
         <!-- Hobbies (checkbox) -->
         <div class="mb-4">
           <span class="section-title">Please Select Hobbies</span>
@@ -154,7 +146,6 @@
             }
         </div>
       </div>
-
 
         <!-- Terms -->
         <div class="form-check mb-4">
