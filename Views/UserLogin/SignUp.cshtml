@@ -1,4 +1,4 @@
-﻿@model HobbyAndEnumviewModel;
+﻿@model HobbyAndEnumViewModel;
 
 @* <p class="text-light">
   @foreach(var item in Model.Genders)
@@ -110,6 +110,8 @@
           <span asp-validation-for="Registration.PhoneNumber"></span>
         </div>
 
+
+
         <!-- Gender (radio) -->
         <div class="mb-3">
           <span class="section-title">Gender</span>
@@ -123,7 +125,7 @@
                 <div class="form-check">
                   <input class="form-check-input"
                          type="radio"
-                         asp-for="Genders"
+                         asp-for="Registration.Gender"
                          value="@gender"
                          id="@genderId" />
                   <label class="form-check-label" for="@genderId">@gender</label>
@@ -131,44 +133,34 @@
               }
             </div>
           }
-            }
-          </div>
-
-          <span asp-validation-for="Genders"></span>
+          <span asp-validation-for="Registration.Gender" class="text-danger"></span>
         </div>
+       
 
         <!-- Hobbies (checkbox) -->
         <div class="mb-4">
-          <span class="section-title">Hobbies</span>
+          <span class="section-title">Please Select Hobbies</span>
           <div class="hobby-group">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyReading" value="Reading" />
-              <label class="form-check-label" for="hobbyReading">Reading</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbySports" value="Sports" />
-              <label class="form-check-label" for="hobbySports">Sports</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyMusic" value="Music" />
-              <label class="form-check-label" for="hobbyMusic">Music</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyTravel" value="Travel" />
-              <label class="form-check-label" for="hobbyTravel">Travel</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyGaming" value="Gaming" />
-              <label class="form-check-label" for="hobbyGaming">Gaming</label>
-            </div>
-          </div>
+            @if(Model.HobbyNames != null)
+            {
+              @foreach (string hobby in Model.HobbyNames)
+              {
+                string id = $"hobby{hobby}";
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="hobbies" id="@id" value="@hobby" />
+                  <label class="form-check-label" for="@id">@hobby</label>
+                </div>
+              }
+            }
         </div>
+      </div>
+
 
         <!-- Terms -->
         <div class="form-check mb-4">
-          <input class="form-check-input" type="checkbox" id="agreeTerms" name="agreeTerms" required />
+          <input class="form-check-input" type="checkbox" id="agreeTerms" asp-for="Registration.IsTermsAgreed" required />
           <label class="form-check-label" for="agreeTerms">
-            I agree to the <a href="#">Terms & Conditions</a>
+            I agree to the <a asp-controller="SoonToBeDone">Terms & Conditions</a>
           </label>
         </div>
 

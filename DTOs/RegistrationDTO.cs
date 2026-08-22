@@ -40,10 +40,11 @@ namespace RoadMapBasedProjects.DTOs
     public string? ConfirmPassword { get; set; }
 
     [Required(ErrorMessage = "Please select a gender.")]
-    public Genders? Gender { get; set; }
+    public Gender? Gender { get; set; }
 
     [Required(ErrorMessage = "Please accept the terms and conditions.")]
     public bool IsTermsAgreed { get; set; }
+
 
     public List<int> HobbyId { get; set; } = new List<int>();
   }

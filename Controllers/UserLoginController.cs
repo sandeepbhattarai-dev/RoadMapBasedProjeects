@@ -3,7 +3,6 @@ using RoadMapBasedProjects.DTOs;
 using RoadMapBasedProjects.Enums;
 using RoadMapBasedProjects.Services;
 using RoadMapBasedProjects.ViewModel;
-using System.Security.Cryptography.X509Certificates;
 
 namespace RoadMapBasedProjects.Controllers
 {
@@ -33,10 +32,10 @@ namespace RoadMapBasedProjects.Controllers
       //fetch gender and hobbies and pass it to the
       IEnumerable<string> hobbyNames = _gethobbiessv.GetAllHobbies();
 
-      Gender[] genders = Enum.GetValues<Genders>();
+      Gender[] genders = Enum.GetValues<Gender>();
 
       RegistrationDTO registrationDTO = new RegistrationDTO();
-      HobbyAndEnumviewModel viewModel = new HobbyAndEnumviewModel
+      HobbyAndEnumViewModel viewModel = new HobbyAndEnumViewModel
       {
         HobbyNames = hobbyNames,
         Genders = genders,

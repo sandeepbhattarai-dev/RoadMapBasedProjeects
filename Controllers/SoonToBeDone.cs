@@ -1,0 +1,12 @@
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace RoadMapBasedProjects.Controllers
+{
+  public class SoonToBeDone : Controller
+  {
+    public IActionResult Index()
+    {
+      return View();
+    }
+  }
+}
