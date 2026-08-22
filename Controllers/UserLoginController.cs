@@ -34,7 +34,6 @@ namespace RoadMapBasedProjects.Controllers
       IEnumerable<string> hobbyNames = _gethobbiessv.GetAllHobbies();
 
       Gender[] genders = Enum.GetValues<Genders>();
-      PublicKey G
 
       RegistrationDTO registrationDTO = new RegistrationDTO();
       HobbyAndEnumviewModel viewModel = new HobbyAndEnumviewModel
