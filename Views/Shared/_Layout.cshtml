@@ -10,26 +10,38 @@
         href="~/lib/bootstrap/css/bootstrap.min.css" />
 </head>
 <body>
-  <div class="container-fluid">
-    <nav>
-      <ul class="carousel-">
-        <li>week-4</li>
-        <li>Home</li>
-        <li asp-for="Account" asp-action="Login"><a>Login</a></li>
-      </ul>
-    </nav>
+  <div class="container-fluid background-image p-0 min-vh-100 d-flex flex-column">
+    <header class="container-fluid sticky-top bg-dark">
+      <nav class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-6 row align-items-center">
+            <div class="col-4 btn btn-primary py-0 my-1">
+              <a asp-controller="Home" asp-action="Index">
+                <img src="https://icons.getbootstrap.com/assets/img/icons-hero.png" class="img-fluid" style="height:50px" />
+                <p class="fs-5 text-decoration-none text-light fs-5 d-inline">Week4-login</p>
+              </a>
+            </div>
+            <div class="col-3 text-success fs-5">
+              <a asp-action="Index" class="text-decoration-none text-light">Home</a>
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <div class="col-2 row gap-3 px-0 py-0 my-0">
+            <partial name="_Login" />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container flex-grow-1 d-flex p-0">
+      @RenderBody()
+    </div>
+
+    <footer class="container-fluid bg-black">
+      <p class="text-center h2 text-white m-0 py-2">This is a footer</p>
+    </footer>
   </div>
   
-
-
-  <div class="container-fluid text-light body-height background-image">
-    @RenderBody()
-  </div>
-
-  <nav class="container-fluid bg-dark-subtle">
-    <p class="text-center w-100 h3">This is a footer</p>
-    
-  </nav>
   <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="~/lib/jquery/jquery.min.js"></script>
 </body>

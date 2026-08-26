@@ -1,0 +1,32 @@
+﻿@model Register;
+
+<div class="col-12">
+  <div class="container bg-opacity-75 bg-white mt-5 mx-auto w-50 rounded-5 p-5">
+    <h1>Enter your details to Register</h1>
+    <form action="Register" method="post" novalidate>
+      <div class="mb-3 py-3">
+        <input type="text" class="form-control" placeholder="Enter a unique username" asp-for="UserName">
+        <span asp-validation-for="UserName" class="text-danger mt-1"></span>
+      </div>
+      <div class="mb-3 py-3">
+        <input type="email" class="form-control" placeholder="Enter a new Email" asp-for="Email">
+          <span asp-validation-for="Email" class="text-danger mt-1"></span>
+      </div>
+      <div class="mb-3 py-3">
+        <input type="password" class="form-control" asp-for="Password" placeholder="Enter your password">
+            <span asp-validation-for="Password" class="text-danger mt-1"></span>
+      </div>
+      <div class="mb-3 py-3">
+        <input type="password" class="form-control" asp-for="ConfirmPassword" placeholder="Enter the password again">
+         <span asp-validation-for="ConfirmPassword" class="text-danger mt-1"></span>
+      </div>
+      <div class="row gap-3">
+        <div class="col-1"></div>
+        <button type="submit" class="btn btn-primary col-3">Register</button>
+        <button type="submit" class="btn btn-primary col-3">Back</button>
+        <div class="col-5"></div>
+      </div>
+      <p class="text-center">Already a user? <a class="text-decoration-none" asp-controller="Account" asp-action="Login">Got to Login</a></p>
+    </form>
+  </div>
+</div>

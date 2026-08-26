@@ -1,0 +1,25 @@
+﻿@inject CurrentUser CurrentUser
+
+@{
+  bool IsAnyOneLogIn = CurrentUser.currentuser();
+}
+
+
+@{
+  if (!IsAnyOneLogIn)
+  {
+    <div class="col-6 btn btn-info px-0 my-0">
+    <a asp-controller="Account" asp-action="Register" class="text-decoration-none text-dark fs-5">Register</a>
+    </div>
+    <div class="col-4 btn btn-warning px-0"><a asp-controller="Account" asp-action="Login" class="text-decoration-none text-dark fs-5">Login</a></div>
+  }
+  else
+  {
+     <div class="col-5 text-white btn btn-success">@CurrentUser.whoami()</div>
+     <div class="col-5 btn btn-info">
+      <a asp-action="Logout" asp-controller="Account">Logout</a>
+     </div>
+  }
+}
+
+

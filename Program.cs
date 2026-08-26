@@ -1,7 +1,14 @@
+using RoadMapBasedProjects.DataBase;
+using RoadMapBasedProjects.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<Usertbl>();
+builder.Services.AddSingleton<CurrentUser>();
+builder.Services.AddScoped<IGetDataFromDb, GetDataFromDb>();
+
 
 var app = builder.Build();
 

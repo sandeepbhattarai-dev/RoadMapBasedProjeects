@@ -9,6 +9,10 @@ namespace RoadMapBasedProjects.Models
     public int Id { get; set; }
 
     [Required]
+    [DataType(DataType.EmailAddress)]
+    public string Email { get; set; } = string.Empty;
+
+    [Required]
     [StringLength(24, MinimumLength =3,ErrorMessage ="Enter Valid UserName")]
     public string UserName { get; set; } = string.Empty;
 
