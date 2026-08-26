@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<Usertbl>();
 builder.Services.AddSingleton<CurrentUser>();
+builder.Services.AddSingleton<Producttbl>();
 builder.Services.AddScoped<IGetDataFromDb, GetDataFromDb>();
+builder.Services.AddScoped<IProductServices, ProductServices>();
 
 
 var app = builder.Build();

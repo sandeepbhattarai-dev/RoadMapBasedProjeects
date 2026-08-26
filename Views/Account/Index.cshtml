@@ -1,2 +1,14 @@
-﻿@model string
-<p class="text-bg-info">@Model</p>
+﻿
+<h1>Welcome User</h1>
+
+<a asp-controller="Product" asp-action="Index">
+  <div class="btn btn-warning">
+    Add Produvts to Cart
+  </div>
+</a>
+<a asp-controller="Account" asp-action="Manage">
+  <div class="btn btn-info">
+    Manage your Profile
+  </div>
+</a>
+

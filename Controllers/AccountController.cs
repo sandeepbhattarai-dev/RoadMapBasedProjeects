@@ -1,24 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using RoadMapBasedProjects.Models;
 using RoadMapBasedProjects.Services;
 
 namespace RoadMapBasedProjects.Controllers
 {
-  public class Account : Controller
+  public class AccountController : Controller
   {
     private readonly IGetDataFromDb _dataFromDb;
     private readonly CurrentUser _currentUser;
-    public Account(IGetDataFromDb datafromdb, CurrentUser currentuser)
+    public AccountController(IGetDataFromDb datafromdb, CurrentUser currentuser)
     {
       _dataFromDb = datafromdb;
       _currentUser = currentuser;
     }
 
-    public IActionResult Index(string something)
+    public IActionResult Index()
     {
-      something = "something";
-      return View((Object)something);
+
+      return View();
     }
 
 
@@ -40,19 +39,19 @@ namespace RoadMapBasedProjects.Controllers
           {
             if (_currentUser.Login(user.UserName))
             {
-              return RedirectToAction("Index", "Home");
+              return RedirectToAction("Index");
             }
             else
             {
-              return View("Index", "fail to login");
+              return View();
             }
           }
         }
         else
         {
-          return View("Index", "No user found");
+          return View();
         }
-        
+
       }
       return View(user);
     }
@@ -75,8 +74,9 @@ namespace RoadMapBasedProjects.Controllers
         {
           return RedirectToAction("Login");
         }
-        else{
-          return View("Index", "try again");
+        else
+        {
+          return View();
         }
       }
       else
@@ -103,7 +103,7 @@ namespace RoadMapBasedProjects.Controllers
       }
       else
       {
-         return View("Index", "could not log out");
+        return View();
       }
     }
   }
