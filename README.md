@@ -6,3 +6,9 @@ Contains a dev branch and a main branch. The dev branch is used for development 
 
 - For this project the master acts as the minimum code and dev is a working branch. The dev branch is used to create new branches for features and bug fixes, the new branches naming is prefixed by 'week-X'. Once the feature or bug fix is complete, it is merged back into the dev branch after signal from the team. After thorough testing, the changes are then merged into the main branch for deployment.
 
+
+
+
+**************
+ # Note: Till week 4, I have just focused on project/learning. So I have not used Company Conventions, for the later project I will be using it.
+ *************
