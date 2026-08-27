@@ -8,16 +8,23 @@ namespace RoadMapBasedProjects.Controllers
   public class ProductController : Controller
   {
     private readonly IProductServices _productServices;
-    public ProductController(IProductServices productServices)
+    private readonly CurrentUser _currentuser;
+    public ProductController(IProductServices productServices, CurrentUser currentuser)
     {
-      _productServices = productServices; 
+      _productServices = productServices;
+      _currentuser = currentuser;
     }
 
     public IActionResult Index()
     {
-      List<ProductModel> products;
-      products = _productServices.GetProducts();
-      return View(products);
+      if (_currentuser.currentuser())
+      {
+        List<ProductModel> products;
+        products = _productServices.GetProducts();
+        return View(products);
+      }
+      return RedirectToAction("Login", "Account");
+      
     }
   }
 }

@@ -16,11 +16,16 @@ namespace RoadMapBasedProjects.Controllers
 
     public IActionResult Index()
     {
-
-      return View();
+      if (_currentUser.currentuser())
+      {
+        return View();
+      }
+      else
+      {
+        return RedirectToAction("Login");
+      }
+      
     }
-
-
 
     /* -------------Login------------------*/
     public IActionResult Login()
