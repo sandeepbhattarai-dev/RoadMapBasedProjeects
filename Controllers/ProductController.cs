@@ -66,6 +66,7 @@ namespace RoadMapBasedProjects.Controllers
     [HttpPost]
     public IActionResult AddNewProduct(ProductViewModel product)   // 
     {
+      Product newproduct = GenerateProduct(product);
       
       if (_productRepository.CreateNewProduct(newproduct))
       {
@@ -78,23 +79,40 @@ namespace RoadMapBasedProjects.Controllers
 
     public IActionResult Edit(string id)
     {
-
-
-      return RedirectToAction("Buy");
+      Product? editproduct = _productRepository.GetProductById(id);
+      if (editproduct != null)
+      {
+        return View(new ProductViewModel()
+        {
+          Name = editproduct.Name,
+          Description = editproduct.Description,
+          Type = editproduct.Type,
+          Link = editproduct.Link,
+          Price = editproduct.Price,
+        });
+      }
+      return NotFound();
     }
+
+
     [HttpPost]
     public IActionResult Edit(ProductViewModel product)
     {
+      Product newproduct = GenerateProduct(product);
+      if (_productRepository.UpdatePrduct(newproduct))
+      {
+         return RedirectToAction("Buy");
+      }
 
-
-      return RedirectToAction("Buy");
+      return NotFound();
+      
     }
 
     public IActionResult Remove(string id)
     {
-      Product product = _productRepository.GetProductById(id);
+      Product? product = _productRepository.GetProductById(id);
       _productRepository.DeleteProduct(product);
-      return RedirectToAction("Remove");
+      return RedirectToAction("Buy");
     }
 
 
