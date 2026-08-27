@@ -1,11 +1,33 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RoadMapBasedProjects.Repository;
 using RoadMapBasedProjects.ViewModels;
+using RoadMapBasedProjects.Models;
 
 namespace RoadMapBasedProjects.Controllers
 {
   public class ProductController : Controller
   {
+    private static int _productCounter = 30;
+
+    private static string GenerateProductId()
+    {
+      _productCounter++;
+      return $"P{_productCounter:D3}";
+    }
+
+    private static Product GenerateProduct(ProductViewModel product)
+    {
+      return new Product()
+      {
+        Id = GenerateProductId(),
+        Name = product.Name,
+        Description = product.Description,
+        Link = product.Link,
+        Price = product.Price,
+        selected = true,
+        Type = product.Type
+      };
+    }
     private readonly IProductRepository _productRepository;
     public ProductController(IProductRepository repository)
     {
@@ -18,28 +40,119 @@ namespace RoadMapBasedProjects.Controllers
       // add new product and show entered product
       return View();
     }
-    public IActionResult InputForm()
+
+
+    public IActionResult Buy() // Display the all Product
     {
+      List<Product> products = _productRepository.GetProducts();
+      if (products.Count > 0)
+      {
+        return View(products);
+      }
+
+      return NotFound();
+        
+    }
+
+
+
+
+    public IActionResult AddNewProduct()    // just the view
+    {
+
       return View();
+    }
+
+    [HttpPost]
+    public IActionResult AddNewProduct(ProductViewModel product)   // 
+    {
+      
+      if (_productRepository.CreateNewProduct(newproduct))
+      {
+        return RedirectToAction("Index");
+      }
+      return View(product);
+    }
+
+
+
+    public IActionResult Edit(string id)
+    {
+
+
+      return RedirectToAction("Buy");
     }
     [HttpPost]
-    public IActionResult InputForm(ProductViewModel newproductdetails)
+    public IActionResult Edit(ProductViewModel product)
     {
-      if (ModelState.IsValid) 
-      {
-        // add to db/file
-      }
-      return View(newproductdetails);
+
+
+      return RedirectToAction("Buy");
+    }
+
+    public IActionResult Remove(string id)
+    {
+      Product product = _productRepository.GetProductById(id);
+      _productRepository.DeleteProduct(product);
+      return RedirectToAction("Remove");
     }
 
 
-    public IActionResult Buy()
-    {
-      return View();
-    }
-    public IActionResult AddToCart()
-    {
-      return View();
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 }

@@ -1,6 +1,5 @@
 # My Roadmap
 # Month 2: Intermediate Level Development
-
 ## Week 5: Models and Data Binding
 - [ ] Tasks : 
   - Create models to represent data.

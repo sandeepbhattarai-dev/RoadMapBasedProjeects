@@ -20,3 +20,46 @@ input {
     color: #ffffff;
     opacity: 0.7; /* Optional: Slightly lower opacity so it looks like a hint */
   }
+
+
+.product-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+  background: #fff;
+}
+
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .14) !important;
+  }
+
+.product-image-wrapper {
+  height: 220px;
+  padding: 14px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  height: 44px;
+  overflow: hidden;
+}
+
+.product-description {
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}

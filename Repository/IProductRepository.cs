@@ -8,8 +8,8 @@ namespace RoadMapBasedProjects.Repository
     // get all products
     public List<Product> GetProducts();
 
-    // get one product by ID
-    //public Product GetProductById(string id);
+    //get one product by ID
+    public Product GetProductById(string id);
 
     // create product
     public bool CreateNewProduct(Product product);

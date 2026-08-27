@@ -1,0 +1,182 @@
+[
+  {
+    "Id": "P001",
+    "Name": "Apple",
+    "Price": 120.00,
+    "Description": "Fresh and crisp red apples.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6"
+  },
+  {
+    "Id": "P002",
+    "Name": "Banana",
+    "Price": 60.00,
+    "Description": "Naturally sweet and ripe bananas.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e"
+  },
+  {
+    "Id": "P003",
+    "Name": "Mango",
+    "Price": 150.00,
+    "Description": "Juicy and sweet seasonal mangoes.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1553279768-865429fa0078"
+  },
+  {
+    "Id": "P004",
+    "Name": "Orange",
+    "Price": 90.00,
+    "Description": "Fresh citrus oranges with a refreshing taste.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1547514701-42782101795e"
+  },
+  {
+    "Id": "P005",
+    "Name": "Grapes",
+    "Price": 110.00,
+    "Description": "Sweet and juicy grapes.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1537640538966-79f369143f8f"
+  },
+  {
+    "Id": "P006",
+    "Name": "Pineapple",
+    "Price": 100.00,
+    "Description": "Fresh tropical pineapple.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba"
+  },
+  {
+    "Id": "P007",
+    "Name": "Watermelon",
+    "Price": 80.00,
+    "Description": "Refreshing and juicy watermelon.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1563114773-84221bd62daa"
+  },
+  {
+    "Id": "P008",
+    "Name": "Papaya",
+    "Price": 70.00,
+    "Description": "Soft and naturally sweet papaya.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1526318472351-c75fcf070305"
+  },
+  {
+    "Id": "P009",
+    "Name": "Pomegranate",
+    "Price": 180.00,
+    "Description": "Fresh pomegranate filled with juicy seeds.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1541344999736-83eca272f6fc"
+  },
+  {
+    "Id": "P010",
+    "Name": "Strawberry",
+    "Price": 220.00,
+    "Description": "Fresh and sweet strawberries.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6"
+  },
+  {
+    "Id": "P011",
+    "Name": "Guava",
+    "Price": 90.00,
+    "Description": "Fresh green guavas.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1536511132770-e5058c7e8c46"
+  },
+  {
+    "Id": "P012",
+    "Name": "Kiwi",
+    "Price": 200.00,
+    "Description": "Tangy and refreshing green kiwi.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1585059895524-72359e06133a"
+  },
+  {
+    "Id": "P013",
+    "Name": "Pear",
+    "Price": 140.00,
+    "Description": "Sweet and mildly crisp pears.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb"
+  },
+  {
+    "Id": "P014",
+    "Name": "Peach",
+    "Price": 190.00,
+    "Description": "Soft and juicy peaches.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1629828874514-8b6f6b9e4e9b"
+  },
+  {
+    "Id": "P015",
+    "Name": "Chikoo",
+    "Price": 100.00,
+    "Description": "Naturally sweet and soft chikoo.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716"
+  },
+  {
+    "Id": "P016",
+    "Name": "Lychee",
+    "Price": 250.00,
+    "Description": "Sweet and aromatic lychees.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1622286346003-c6c9c4e4e6e5"
+  },
+  {
+    "Id": "P017",
+    "Name": "Dragon Fruit",
+    "Price": 300.00,
+    "Description": "Exotic dragon fruit with a mildly sweet flavor.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1527325678964-54921661f888"
+  },
+  {
+    "Id": "P018",
+    "Name": "Coconut",
+    "Price": 80.00,
+    "Description": "Fresh coconut suitable for drinks and cooking.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1580984969071-a8da5656c2fb"
+  },
+  {
+    "Id": "P019",
+    "Name": "Blueberry",
+    "Price": 350.00,
+    "Description": "Sweet and slightly tangy blueberries.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e"
+  },
+  {
+    "Id": "P020",
+    "Name": "Raspberry",
+    "Price": 320.00,
+    "Description": "Fresh and flavorful red raspberries.",
+    "Type": "Fruit",
+    "selected": false,
+    "Link": "https://images.unsplash.com/photo-1577069861033-55d04cec4ef5"
+  }
+]

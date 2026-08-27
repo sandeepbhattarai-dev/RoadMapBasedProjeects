@@ -15,19 +15,18 @@
       <nav class="container">
         <div class="row justify-content-between align-items-center">
           <div class="col-6 row align-items-center">
-            <div class="col-4 btn btn-primary py-0 my-1">
+            <div class="col-auto btn btn-primary py-0 my-1">
               <a asp-controller="Home" asp-action="Index">
                 <img src="https://icons.getbootstrap.com/assets/img/icons-hero.png" class="img-fluid" style="height:50px" />
-                <p class="fs-5 text-decoration-none text-light fs-5 d-inline">Week4-login</p>
+                <p class="fs-5 text-decoration-none text-light fs-5 d-inline">Week5-CRUD on Product</p>
               </a>
             </div>
             <div class="col-3 text-success fs-5">
-              <a asp-action="Index" class="text-decoration-none text-light">Home</a>
+              <a asp-action="Index" asp-controller="Product" class="text-decoration-none text-light">Product</a>
             </div>
-            <div class="col-3"></div>
           </div>
           <div class="col-2 row gap-3 px-0 py-0 my-0">
-            <partial name="_Login" />
+            
           </div>
         </div>
       </nav>

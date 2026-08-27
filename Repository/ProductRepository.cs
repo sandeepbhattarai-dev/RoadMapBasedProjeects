@@ -20,19 +20,19 @@ namespace RoadMapBasedProjects.Repository
       return _readfile.FileRead();
     }
 
-    //// get one product by ID
-    //public Product GetProductById(string id)
-    //{
-    //  List<Product> products = GetProducts();
-    //  foreach (var item in products)
-    //  {
-    //    if (item.Id == (id))
-    //    {
-    //      return item;
-    //    }
-    //  }
-    //  return null;
-    //}
+    // get one product by ID
+    public Product GetProductById(string id)
+    {
+      List<Product> products = GetProducts();
+      foreach (var item in products)
+      {
+        if (item.Id == (id))
+        {
+          return item;
+        }
+      }
+      return null;
+    }
 
     // create product
     public bool CreateNewProduct(Product product)
