@@ -66,11 +66,15 @@ namespace RoadMapBasedProjects.Controllers
     [HttpPost]
     public IActionResult AddNewProduct(ProductViewModel product)   // 
     {
-      Product newproduct = GenerateProduct(product);
-      
-      if (_productRepository.CreateNewProduct(newproduct))
-      {
-        return RedirectToAction("Index");
+      if(ModelState.IsValid)
+        {
+        Product newproduct = GenerateProduct(product);
+
+        if (_productRepository.CreateNewProduct(newproduct))
+        {
+          return RedirectToAction("Index");
+        }
+        
       }
       return View(product);
     }
