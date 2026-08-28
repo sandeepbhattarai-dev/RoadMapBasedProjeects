@@ -1,14 +1,23 @@
+using Microsoft.EntityFrameworkCore;
+using RoadMapBasedProjects.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
+// configure DbContext
+string? ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+if (ConnectionString != null)
+{
+  builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(ConnectionString));
+}
+  var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+  // Configure the HTTP request pipeline.
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+  app.MapControllerRoute(
+      name: "default",
+      pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.Run();
+  app.Run();
