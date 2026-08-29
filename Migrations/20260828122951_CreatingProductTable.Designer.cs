@@ -11,8 +11,8 @@ using RoadMapBasedProjects.Data;
 namespace RoadMapBasedProjects.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260828114315_creating the product table")]
-    partial class creatingtheproducttable
+    [Migration("20260828122951_CreatingProductTable")]
+    partial class CreatingProductTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

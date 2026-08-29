@@ -14,7 +14,8 @@ if (ConnectionString != null)
 }
   var app = builder.Build();
 
-  // Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline.
+app.UseStaticFiles();
 
   app.MapControllerRoute(
       name: "default",

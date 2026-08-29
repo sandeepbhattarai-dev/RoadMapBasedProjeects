@@ -5,7 +5,7 @@
 namespace RoadMapBasedProjects.Migrations
 {
     /// <inheritdoc />
-    public partial class creatingtheproducttable : Migration
+    public partial class CreatingProductTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

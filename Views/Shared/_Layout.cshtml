@@ -3,21 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product</title>
+  <title>Document</title>
+  <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css"/>
 </head>
 <body>
-  <header class="container-fluid">
-    <nav class="container">
-      <div>
-        <ul class="list-group list-group-horizontal">
-          <li>logo</li>
-          <li>name</li>
-          <li>list 3</li>
-          <li>list 4</li>
-        </ul>
-      </div>
+  <header class="container-fluid p-0 bg-danger">
+    <nav class="container bg-dark-subtle navbar navbar-expand-sm">
+        <a class="navbar-brand" href="#">
+          <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          Bootstrap
+        </a>
+
+      <button
+        class="navbar-toggler navbar-toggler-icon"
+        data-bs-toggle = "collapse"></button>
+      <ul class="list-group list-unstyled navbar-collapse">
+        <li class="list-group-item">gf</li>
+      </ul>
     </nav>
   </header>
 
+  <div class="main-content">
+      @RenderBody()
+  </div>
+
+  <footer class="container-fluid"></footer>
+  <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>
