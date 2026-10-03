@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sandeepbhattarai\\source\\repos\\GameStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB61D64A-945E-D805-260E-C587CA0BA1C7}|GameStore\\GameStore.csproj|c:\\users\\sandeepbhattarai\\source\\repos\\gamestore\\gamestore\\games.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{CB61D64A-945E-D805-260E-C587CA0BA1C7}|GameStore\\GameStore.csproj|solutionrelative:gamestore\\games.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "games.http",
+              "DocumentMoniker": "C:\\Users\\sandeepbhattarai\\source\\repos\\GameStore\\GameStore\\games.http",
+              "RelativeDocumentMoniker": "GameStore\\games.http",
+              "ToolTip": "C:\\Users\\sandeepbhattarai\\source\\repos\\GameStore\\GameStore\\games.http",
+              "RelativeToolTip": "GameStore\\games.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-07-13T07:20:53.627Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
